@@ -1,57 +1,41 @@
 #Ninagram
 ==========
+CSS filter property is an amazing tool that allows you adding filters to the images. Ninagram try to give you the posibility to use this powerfull CSS feature.
 
-CSS filter property is a powerful tool that allows you adding filters to the images. We’ll cover examples of all the predefined filters defined for CSS with some examples
-
-#Demo:
-https://ninaiskel.github.io/Ninagram/
-
-#Filters:
---------------------
-+ grayscale
-+ sepia
-+ saturate
-+ hue-rotate
-+ invert
-+ opacity
-+ brightness
-+ contrast
-+ drop-shadow
+You can see it on action in this [Demo](https://ninaiskel.github.io/Ninagram/)
 
 Learn more about CSS filters:
 https://developer.mozilla.org/en-US/docs/Web/CSS/filter?v=control
 
-##Usage
-You can use this examples in your own css file, or download the ninagram.css file and add it to the <head> of your document this link:
+#Usage
+==========
+Copy the ninagram's CSS file, or download [file](https://github.com/ninaiskel/Ninagram/blob/master/app/css/ninagram.css)  and add it to the `<head>` tag of your document.
 
-```
-<link href="path/ninagram.css" rel="stylesheet" type="text/css">
-```
+You can use the filters, use the proper classes on your elements, and that's it!
 
-Then to use the filters, use the proper classes on your elements, and that's it!
-
+HTML
 ```
 <div class="grayscale">
     <img src="image.png"/>
 </div>
 ```
 
-## Example
+CSS
 
 ```css
-.blur img {
-	filter: blur(4px);
+.grayscale img {
+    filter: grayscale(1); 
 }
 
 .sepia img {
-  filter: sepia(1); }
+    filter: sepia(1); 
+}
 ```
 
-You can combine filters too
+You can combine multiple filters on the same property
 ```css
 .blur img {
-	filter: blur(1px)
-          contrast(1);
+    filter: blur(1px) contrast(1);
 }
 ```
 
