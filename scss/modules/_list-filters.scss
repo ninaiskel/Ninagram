@@ -1,0 +1,75 @@
+.wrap-list-filter {
+  background: get-color('first');
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.list-filter {
+  background: white;
+  border: 1px solid get-color('text');
+  display: flex;
+  flex-basis: 31%;
+  flex-direction: column;
+  margin: 20px 1%;
+
+  @include breakpoint('medium') {
+    flex-basis: 47%;
+	}
+
+  @include breakpoint('small') {
+    flex-basis: 98%;
+	}
+
+  &-img {
+    width: 100%;
+  }
+
+  &-code {
+    background: white;
+    border-top: 1px solid get-color('text');
+    color: get-color('text');
+    padding: 20px;
+  }
+}
+
+code {
+		color: get-color('text');
+		font-family:'Monoid';
+		font-size: 14px;
+
+    span {
+			color: get-color('third');
+		}
+
+		.filter-parameter {
+				color: get-color('second');
+		}
+
+		.filter-value {
+			color: get-color('fourth');
+		}
+}
+
+.img-original {
+  text-align: center;
+  width: 100%;
+  img {
+    width: auto;
+  }
+}
+
+.wrap-title {
+  padding: 30px 1%;
+  text-align: center;
+
+  h1 {
+    color: get-color('second');
+    font-size: 40px;
+
+    @include breakpoint('small') {
+      font-size: 30px;
+    }
+  }
+}
