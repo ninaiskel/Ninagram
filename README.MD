@@ -40,15 +40,18 @@ You can combine multiple filters on the same property
 ```
 
 ### Available Classes
-- .grayscale
-- .sepia
-- .saturate
-- .hue-rotate
-- .invert
-- .opacity
-- .brightness
-- .contrast
-- .drop-shadow
-- .contrast-saturate-sepia
-- .drop-shadow-saturate-contrast
-- .grayscale-invert-contrast
+
+### Available Classes
+```.grayscale
+.sepia
+.saturate
+.hue-rotate
+.invert
+.opacity
+.brightness 
+.contrast
+.drop-shadow
+.contrast-saturate-sepia
+.drop-shadow-saturate-contrast
+.grayscale-invert-contrast
+```
