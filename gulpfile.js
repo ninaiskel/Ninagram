@@ -3,15 +3,18 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     useref = require('gulp-useref'),
     cssnano = require('gulp-cssnano'),
+    postcss = require('gulp-postcss'),
     autoprefixer = require('gulp-autoprefixer'),
+    gulpIf = require('gulp-if'),
     browserSync = require('browser-sync').create(),
     connect = require('gulp-connect');
 
-gulp.task('default', ['watch', 'connect']);
+gulp.task('default', ['watch','connect']);
 
 gulp.task('sass', function() {
-  return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+  return gulp.src('app/scss/**/*.scss')
     .pipe(sass())
+    .pipe(cssnano())
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
       stream: true
@@ -20,12 +23,10 @@ gulp.task('sass', function() {
 
 gulp.task('watch', ['browserSync', 'sass'], function (){
   gulp.watch('app/scss/**/*.scss', ['sass']);
-  gulp.watch('app/css/main.css', ['css']);
   gulp.watch('app/*.html', browserSync.reload);
 });
 
 // browserSync
-
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
@@ -34,37 +35,29 @@ gulp.task('browserSync', function() {
   })
 })
 // gulp conect
-gulp.task('connect', function() {
-  connect.server({
-    root: 'app',
-    livereload: true
-  });
+gulp.task('connect', function () {
+    connect.server({
+        root: 'dist',
+        port: 8001,
+        livereload: true
+    });
 });
-
-
-
-//useref
-gulp.task('useref', function(){
- return gulp.src('dist/*.html')
-   .pipe(useref())
-   .pipe(gulp.dest('dist'))
-});
-
-gulp.task('default', () =>
-    gulp.src('app/main.css')
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('dist'))
-);
 
 gulp.task('css', function () {
     var processors = [
         autoprefixer({browsers: ['last 1 version']}),
         cssnano(),
     ];
-    return gulp.src('.app/css/main.css')
+    return gulp.src('./app/css/main.css')
         .pipe(postcss(processors))
-        .pipe(gulp.dest('./dist/css/main.min.css'));
+        .pipe(gulp.dest('./appcss/main.min.css'));
+});
+
+//useref //cssnano
+gulp.task('useref', function(){
+  return gulp.src('app/*.html')
+    .pipe(useref())
+    // Minifies only if it's a CSS file
+    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulp.dest('dist'))
 });

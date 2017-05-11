@@ -1,20 +1,3 @@
-$breakpoints: (
-	'xlarge'          : "(min-width: 1360px)",
-	'large'           : "(min-width: 1024px)",
-	'>=small<=medium' : "(min-width: 240px) and (max-width: 1023px)",
-	'medium'          : "(min-width: 700px) and (max-width: 1023px)",
-	'small'           : "(min-width: 240px) and (max-width: 699px)"
-)!default;
-
-@mixin breakpoint($device) {
-	@if not map-has-key($breakpoints, $device) {
-		@error 'Device value (#{$device}) is unknown';
-	}
-	@media #{map-get($breakpoints, $device)} {
-		@content;
-	}
-}
-//
 .filtering {
   margin: 0 auto;
   width: 100%;

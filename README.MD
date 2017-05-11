@@ -24,7 +24,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/filter?v=control
 You can use this examples in your own css file, or download the filtering.css file and add it to the head of your document this link:
 
 ```
-<link href="path/filtering.css" rel="stylesheet" type="text/css">
+<link href="path/ninagram.css" rel="stylesheet" type="text/css">
 ```
 
 Then to use the filters, use the proper classes on your elements, and that's it!
@@ -41,4 +41,7 @@ Then to use the filters, use the proper classes on your elements, and that's it!
 .blur img {
 	filter: blur(4px) contrast(2);
 }
+
+.sepia img {
+  filter: sepia(1); }
 ```
