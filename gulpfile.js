@@ -14,7 +14,6 @@ gulp.task('default', ['watch','connect']);
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss')
     .pipe(sass())
-    .pipe(cssnano())
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
       stream: true
@@ -50,7 +49,7 @@ gulp.task('css', function () {
     ];
     return gulp.src('./app/css/main.css')
         .pipe(postcss(processors))
-        .pipe(gulp.dest('./appcss/main.min.css'));
+        .pipe(gulp.dest('./app/css/main.min.css'));
 });
 
 //useref //cssnano
