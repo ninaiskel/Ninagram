@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>filtering</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  </head>
+
+  <body>
+    <section class="filtering">
+      <div class="filtering-description">
+        <div class="filtering-description-text">
+          <h1>Filtering</h1>
+          <p>CSS filter property is a powerful tool that provides access to effects. We’ll cover examples of all the predefined filters defined for CSS with some examples</p>
+          <div class="box-example">
+            <code>
+              .filter-img {
+                <br><span>&nbsp;&nbsp;filter: </span>
+                <span class="filter-parameter">filter-name</span>
+                (<span class="filter-value">filter-value</span>);
+              <br>}
+            </code>
+          </div>
+        </div>
+        <div class="filtering-description-img">
+          <img src="img/caracas.jpg" alt="">
+        </div>
+      </div>
+      <ul class="wrap-list-filter">
+        <li class="list-filter grayscale">
+          <img class="list-filter-img" src="img/caracas.jpg" alt="">
+          <div class="list-filter-code">
+            <h2>Grayscale</h2>
+              <code>
+                .grayscale {
+                <br><span>&nbsp;&nbsp;filter: </span>
+                <span class="filter-parameter">grayscale</span>
+                (<span class="filter-value">1</span>);
+                <br>}
+            </code>
+          </div>
+        </li>
+
+        <li class="list-filter sepia">
+          <img class="list-filter-img" src="img/caracas.jpg" alt="">
+          <div class="list-filter-code">
+            <h2>Sepia</h2>
+              <code>
+                .sepia {
+                <br><span>&nbsp;&nbsp;filter: </span>
+                <span class="filter-parameter">sepia</span>
+                (<span class="filter-value">1</span>);
+                <br>}
+            </code>
+          </div>
+        </li>
+        <li class="list-filter contrast">
+          <img class="list-filter-img" src="img/caracas.jpg" alt="">
+          <div class="list-filter-code">
+            <h2>Contrast</h2>
+              <code>
+                .contrast {
+                <br><span>&nbsp;&nbsp;filter: </span>
+                <span class="filter-parameter">contrast</span>
+                (<span class="filter-value">2</span>);
+                <br>}
+            </code>
+          </div>
+        </li>
+
+        <li class="list-filter brightness">
+          <img class="list-filter-img" src="img/caracas.jpg" alt="">
+          <div class="list-filter-code">
+            <h2>Brightness</h2>
+              <code>
+                .brightness {
+                  <br><span>&nbsp;&nbsp;filter: </span>
+                  <span class="filter-parameter">brightness</span>
+                  (<span class="filter-value">2</span>);
+                  <br>}
+            </code>
+          </div>
+          </div>
+        </li>
+
+        <li class="list-filter saturate">
+          <img class="list-filter-img" src="img/caracas.jpg" alt="">
+          <div class="list-filter-code">
+            <h2>Saturate</h2>
+              <code>
+                .saturate {
+                  <br><span>&nbsp;&nbsp;filter: </span>
+                  <span class="filter-parameter">saturate</span>
+                  (<span class="filter-value">1</span>);
+                  <br>}
+            </code>
+          </div>
+        </li>
+
+        <li class="list-filter invert">
+          <img class="list-filter-img" src="img/caracas.jpg" alt="">
+          <div class="list-filter-code">
+            <h2>Invert</h2>
+              <code>
+                .invert {
+                  <br><span>&nbsp;&nbsp;filter:</span>
+                  <span class="filter-parameter">invert</span>
+                  (<span class="filter-value">.8</span>);
+                  <br>}
+            </code>
+          </div>
+        </li>
+
+        <li class="list-filter opacity">
+          <img class="list-filter-img" src="img/caracas.jpg" alt="">
+          <div class="list-filter-code">
+            <h2>Opacity</h2>
+              <code>
+                .opacity {
+                  <br><span>&nbsp;&nbsp;filter: </span>
+                  <span class="filter-parameter">opacity</span>
+                  (<span class="filter-value">.1</span>);
+                  <br>}
+            </code>
+          </div>
+        </li>
+
+        <li class="list-filter hue-rotate">
+          <img class="list-filter-img" src="img/caracas.jpg" alt="">
+          <div class="list-filter-code">
+            <h2>Hue-rotate</h2>
+              <code>
+                .hue-rotate {
+                  <br><span>&nbsp;&nbsp;filter: </span>
+                  <span class="filter-parameter">hue-rotate</span>
+                  (<span class="filter-value">90deg</span>);
+                  <br>}
+            </code>
+          </div>
+        </li>
+
+        <li class="list-filter blur">
+          <img class="list-filter-img" src="img/caracas.jpg" alt="">
+          <div class="list-filter-code">
+            <h2>Blur</h2>
+              <code>
+                .blur {
+                  <br><span>&nbsp;&nbsp;filter: </span>
+                  <span class="filter-parameter">blur</span>
+                  (<span class="filter-value">2px</span>);
+                  <br>}
+            </code>
+          </div>
+        </li>
+      </ul>
+
+      <div class="wrap-title">
+        <h1>Combine Filters</h1>
+        <p>You can use multiple filters in one declaration to create infinite custom effects.</p>
+      </div>
+
+      <ul class="wrap-list-filter">
+        <li class="list-filter contrast-saturate-sepia">
+          <img class="list-filter-img" src="img/caracas.jpg" alt="">
+          <div class="list-filter-code">
+            <h2>Combine filter</h2>
+              <code>
+                .contrast-saturate-sepia {
+                <br><span>&nbsp;&nbsp;filter: </span>
+                <span class="filter-parameter">contrast</span>
+                (1.4)
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="filter-parameter">saturate</span>
+                  (<span class="filter-value">1.8</span>)
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="filter-parameter">sepia</span>
+                (<span class="filter-value">.6</span>);
+                <br>}
+            </code>
+          </div>
+        </li>
+        <li class="list-filter drop-shadow-saturate-contrast">
+          <img class="list-filter-img" src="img/caracas.jpg" alt="">
+          <div class="list-filter-code">
+            <h2>Combine filter </h2>
+              <code>
+                .drop-shadow-saturate-contrast {
+                <br><span>&nbsp;&nbsp;filter: </span>
+                <span class="filter-parameter">contrast</span>
+                (<span class="filter-value">1.6</span>);
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="filter-parameter">saturate</span>
+                (<span class="filter-value">.6</span>)
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="filter-parameter">drop-shadow</span>
+                (<span class="filter-value">4px 4px 4px
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rgba(0,0,0,0.6)</span>);
+                <br>}
+            </code>
+          </div>
+        </li>
+        <li class="list-filter grayscale-invert-contrast">
+          <img class="list-filter-img" src="img/caracas.jpg" alt="">
+          <div class="list-filter-code">
+            <h2>Combine filter </h2>
+              <code>
+                .grayscale-invert-contrast {
+                <br><span>&nbsp;&nbsp;filter: </span>
+                <span class="filter-parameter">grayscale</span>
+                  (<span class="filter-value">.6</span>)
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="filter-parameter">invert</span>
+                (<span class="filter-value">.7</span>)
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="filter-parameter">contrast</span>
+                (<span class="filter-value">2</span>);
+                <br>}
+            </code>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </body>
+</html>
