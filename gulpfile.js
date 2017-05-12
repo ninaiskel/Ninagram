@@ -1,12 +1,11 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     watch = require('gulp-watch'),
-    useref = require('gulp-useref'),
-    cssnano = require('gulp-cssnano'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('gulp-autoprefixer'),
     gulpIf = require('gulp-if'),
     browserSync = require('browser-sync').create(),
+    cssnano = require('gulp-cssnano'),
     connect = require('gulp-connect');
 
 gulp.task('default', ['watch','connect']);
@@ -50,13 +49,4 @@ gulp.task('css', function () {
     return gulp.src('./app/css/main.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('./app/css/main.min.css'));
-});
-
-//useref //cssnano
-gulp.task('useref', function(){
-  return gulp.src('app/*.html')
-    .pipe(useref())
-    // Minifies only if it's a CSS file
-    .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist'))
 });
