@@ -45,7 +45,7 @@ You can combine multiple filters on the same property
 ```
 
 # Available Classes
-=======
+
 
 ```
 .grayscale
