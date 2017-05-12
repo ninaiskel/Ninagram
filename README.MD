@@ -40,8 +40,6 @@ You can combine multiple filters on the same property
 ```
 
 ### Available Classes
-
-### Available Classes
 ```.grayscale
 .sepia
 .saturate
