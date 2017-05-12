@@ -3,21 +3,30 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('gulp-autoprefixer'),
-    gulpIf = require('gulp-if'),
     browserSync = require('browser-sync').create(),
     cssnano = require('gulp-cssnano'),
+    sourcemaps = require('gulp-sourcemaps'),
     connect = require('gulp-connect');
 
 gulp.task('default', ['watch','connect']);
 
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(autoprefixer())
     .pipe(cssnano())
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
       stream: true
     }))
+});
+
+gulp.task('css', function () {
+    return gulp.src('app/**/*.css')
+        .pipe( postcss([ require('precss'), require('autoprefixer') ]) )
+        .pipe( gulp.dest('build/') );
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function (){
@@ -40,14 +49,4 @@ gulp.task('connect', function () {
         port: 8001,
         livereload: true
     });
-});
-
-gulp.task('css', function () {
-    var processors = [
-        autoprefixer({browsers: ['last 1 version']}),
-        cssnano(),
-    ];
-    return gulp.src('./app/css/main.css')
-        .pipe(postcss(processors))
-        .pipe(gulp.dest('./app/css/main.min.css'));
 });
