@@ -5,14 +5,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
     cssnano = require('gulp-cssnano'),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     sourcemaps = require('gulp-sourcemaps'),
->>>>>>> origin/gh-pages
-=======
-    sourcemaps = require('gulp-sourcemaps'),
->>>>>>> origin/gh-pages
     connect = require('gulp-connect');
 
 gulp.task('default', ['watch','connect']);
@@ -57,8 +50,6 @@ gulp.task('connect', function () {
         livereload: true
     });
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 gulp.task('css', function () {
     var processors = [
@@ -69,7 +60,3 @@ gulp.task('css', function () {
         .pipe(postcss(processors))
         .pipe(gulp.dest('./app/css/main.min.css'));
 });
-=======
->>>>>>> origin/gh-pages
-=======
->>>>>>> origin/gh-pages

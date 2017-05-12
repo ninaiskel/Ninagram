@@ -21,31 +21,18 @@ HTML
 ```
 
 CSS
-
-```css
+```
 .grayscale img {
-<<<<<<< HEAD
-<<<<<<< HEAD
     filter: grayscale(1);
 }
 
 .sepia img {
     filter: sepia(1);
-=======
-<<<<<<< HEAD
     filter: grayscale(1);
 }
 
 .sepia img {
     filter: sepia(1);
-=======
-    filter: grayscale(1); 
-}
-
-.sepia img {
-    filter: sepia(1); 
->>>>>>> origin/master
->>>>>>> origin/gh-pages
 =======
     filter: grayscale(1);
 }
@@ -57,33 +44,27 @@ CSS
 
 .sepia img {
     filter: sepia(1);
->>>>>>> origin/gh-pages
+    filter: grayscale(1);
+}
+
+.sepia img {
+    filter: sepia(1);
 }
 ```
 
 You can combine multiple filters on the same property
-```css
+```
 .blur img {
     filter: blur(1px) contrast(1);
 }
 ```
 
-<<<<<<< HEAD
-=======
-### Available Classes
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/gh-pages
 
 ### Available Classes
 =======
->>>>>>> origin/master
-```.grayscale
-=======
-=======
+
 ```
 .grayscale
->>>>>>> origin/gh-pages
 .sepia
 .saturate
 .hue-rotate
