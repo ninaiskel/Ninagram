@@ -1,0 +1,61 @@
+.footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+  p {
+    margin-bottom: 0;
+  }
+}
+.heart {
+    position: relative;
+    width: 19px;
+    height: 11px;
+    top: 2px;
+    left: 4px;
+   	display: inline-block;
+    animation: heart 1s ease-in-out infinite;
+
+    &:before, &:after {
+    	position: absolute;
+	    content: "";
+	    width: 6px;
+	    height: 10px;
+	    background: get-color('third');
+	    border-radius: 50px 50px 0 0;
+	    transform-origin: 0 100%;
+	    transform: rotate(-45deg);
+    }
+
+    &:after {
+    	left: 0;
+    	transform: rotate(45deg);
+    	transform-origin: 100% 100%;
+    }
+
+    &:before {
+    	left: 6px;
+    }
+}
+
+@keyframes heart {
+  0%{ transform: scale(1);}
+  50%{ transform: scale(1.1);}
+  100%{ transform: scale(1);}
+}
+
+
+.link {
+  color: get-color('third');
+
+  &:hover {
+    color: get-color('second')
+  }
+}
+
+.link-two {
+  color: get-color('second');
+
+  &:hover {
+    color: get-color('third')
+  }
+}
