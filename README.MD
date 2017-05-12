@@ -24,11 +24,27 @@ CSS
 
 ```css
 .grayscale img {
+<<<<<<< HEAD
     filter: grayscale(1);
 }
 
 .sepia img {
     filter: sepia(1);
+=======
+<<<<<<< HEAD
+    filter: grayscale(1);
+}
+
+.sepia img {
+    filter: sepia(1);
+=======
+    filter: grayscale(1); 
+}
+
+.sepia img {
+    filter: sepia(1); 
+>>>>>>> origin/master
+>>>>>>> origin/gh-pages
 }
 ```
 
@@ -39,8 +55,15 @@ You can combine multiple filters on the same property
 }
 ```
 
+<<<<<<< HEAD
+=======
+### Available Classes
+<<<<<<< HEAD
+>>>>>>> origin/gh-pages
 
 ### Available Classes
+=======
+>>>>>>> origin/master
 ```.grayscale
 .sepia
 .saturate

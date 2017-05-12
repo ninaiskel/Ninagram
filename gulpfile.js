@@ -3,20 +3,33 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('gulp-autoprefixer'),
-    gulpIf = require('gulp-if'),
     browserSync = require('browser-sync').create(),
     cssnano = require('gulp-cssnano'),
+<<<<<<< HEAD
+=======
+    sourcemaps = require('gulp-sourcemaps'),
+>>>>>>> origin/gh-pages
     connect = require('gulp-connect');
 
 gulp.task('default', ['watch','connect']);
 
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(cssnano())
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
       stream: true
     }))
+});
+
+gulp.task('css', function () {
+    return gulp.src('app/**/*.css')
+        .pipe( postcss([ require('precss'), require('autoprefixer') ]) )
+        .pipe( gulp.dest('build/') );
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function (){
@@ -40,6 +53,7 @@ gulp.task('connect', function () {
         livereload: true
     });
 });
+<<<<<<< HEAD
 
 gulp.task('css', function () {
     var processors = [
@@ -50,3 +64,5 @@ gulp.task('css', function () {
         .pipe(postcss(processors))
         .pipe(gulp.dest('./app/css/main.min.css'));
 });
+=======
+>>>>>>> origin/gh-pages
