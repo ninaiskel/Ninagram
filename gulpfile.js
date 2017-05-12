@@ -6,6 +6,10 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     cssnano = require('gulp-cssnano'),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    sourcemaps = require('gulp-sourcemaps'),
+>>>>>>> origin/gh-pages
 =======
     sourcemaps = require('gulp-sourcemaps'),
 >>>>>>> origin/gh-pages
@@ -54,6 +58,7 @@ gulp.task('connect', function () {
     });
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 gulp.task('css', function () {
     var processors = [
@@ -64,5 +69,7 @@ gulp.task('css', function () {
         .pipe(postcss(processors))
         .pipe(gulp.dest('./app/css/main.min.css'));
 });
+=======
+>>>>>>> origin/gh-pages
 =======
 >>>>>>> origin/gh-pages
