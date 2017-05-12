@@ -13,6 +13,7 @@ gulp.task('default', ['watch','connect']);
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss')
     .pipe(sass())
+    .pipe(cssnano())
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
       stream: true
