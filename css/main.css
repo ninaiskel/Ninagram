@@ -156,3 +156,52 @@ code {
 
 .grayscale-invert-contrast img {
   filter: grayscale(0.6) invert(0.7) contrast(2); }
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 13px; }
+  .footer p {
+    margin-bottom: 0; }
+
+.heart {
+  position: relative;
+  width: 19px;
+  height: 11px;
+  top: 2px;
+  left: 4px;
+  display: inline-block;
+  animation: heart 1s ease-in-out infinite; }
+  .heart:before, .heart:after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 10px;
+    background: #b27bb5;
+    border-radius: 50px 50px 0 0;
+    transform-origin: 0 100%;
+    transform: rotate(-45deg); }
+  .heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%; }
+  .heart:before {
+    left: 6px; }
+
+@keyframes heart {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+.link {
+  color: #b27bb5; }
+  .link:hover {
+    color: #459bab; }
+
+.link-two {
+  color: #459bab; }
+  .link-two:hover {
+    color: #b27bb5; }

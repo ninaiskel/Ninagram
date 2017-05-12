@@ -24,11 +24,11 @@ CSS
 
 ```css
 .grayscale img {
-    filter: grayscale(1); 
+    filter: grayscale(1);
 }
 
 .sepia img {
-    filter: sepia(1); 
+    filter: sepia(1);
 }
 ```
 
@@ -48,7 +48,7 @@ You can combine multiple filters on the same property
 .hue-rotate
 .invert
 .opacity
-.brightness 
+.brightness
 .contrast
 .drop-shadow
 .contrast-saturate-sepia
