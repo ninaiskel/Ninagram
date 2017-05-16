@@ -33,7 +33,6 @@ CSS
 
 .sepia img {
     filter: sepia(1);
-=======
     filter: grayscale(1);
 }
 
@@ -53,9 +52,12 @@ CSS
 ```
 
 You can combine multiple filters on the same property
+
 ```
-.blur img {
-    filter: blur(1px) contrast(1);
+.grayscale-invert-contrast img {
+    filter: grayscale(0.6) 
+            invert(0.7) 
+            contrast(2); 
 }
 ```
 
